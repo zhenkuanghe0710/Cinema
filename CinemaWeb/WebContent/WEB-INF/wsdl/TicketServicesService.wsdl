@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions name="TicketServicesService" targetNamespace="http://services.cinema/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://services.cinema/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://services.cinema/" schemaLocation="TicketServicesService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getMessageListResponse">
+    <part element="tns:getMessageListResponse" name="parameters">
+    </part>
+  </message>
+  <message name="createMessage">
+    <part element="tns:createMessage" name="parameters">
+    </part>
+  </message>
+  <message name="retrieveMessage">
+    <part element="tns:retrieveMessage" name="parameters">
+    </part>
+  </message>
+  <message name="createMessageResponse">
+    <part element="tns:createMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="deleteMessage">
+    <part element="tns:deleteMessage" name="parameters">
+    </part>
+  </message>
+  <message name="retrieveMessageResponse">
+    <part element="tns:retrieveMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="deleteMessageResponse">
+    <part element="tns:deleteMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="updateMessage">
+    <part element="tns:updateMessage" name="parameters">
+    </part>
+  </message>
+  <message name="updateMessageResponse">
+    <part element="tns:updateMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="Exception">
+    <part element="tns:Exception" name="fault">
+    </part>
+  </message>
+  <message name="getMessageList">
+    <part element="tns:getMessageList" name="parameters">
+    </part>
+  </message>
+  <portType name="TicketServices">
+    <operation name="getMessageList">
+      <input message="tns:getMessageList">
+    </input>
+      <output message="tns:getMessageListResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="retrieveMessage">
+      <input message="tns:retrieveMessage">
+    </input>
+      <output message="tns:retrieveMessageResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="updateMessage">
+      <input message="tns:updateMessage">
+    </input>
+      <output message="tns:updateMessageResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="deleteMessage">
+      <input message="tns:deleteMessage">
+    </input>
+      <output message="tns:deleteMessageResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="createMessage">
+      <input message="tns:createMessage">
+    </input>
+      <output message="tns:createMessageResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="TicketServicesPortBinding" type="tns:TicketServices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getMessageList">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="retrieveMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="updateMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="deleteMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="createMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="TicketServicesService">
+    <port binding="tns:TicketServicesPortBinding" name="TicketServicesPort">
+      <soap:address location="http://localhost:9080/TicketServices_HTTPRouter/TicketServicesService"/>
+    </port>
+  </service>
+</definitions>

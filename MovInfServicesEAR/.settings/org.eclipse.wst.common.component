@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MovInfServicesEAR">
+        <wb-resource deploy-path="/" source-path="/"/>
+        <dependent-module deploy-path="/" handle="module:/resource/MovInfServices/MovInfServices">
+            <dependent-object>Module_1294412469799</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/" handle="module:/resource/MovInfServices_HTTPRouter/MovInfServices_HTTPRouter">
+            <dependent-object>Module_1294470896151</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

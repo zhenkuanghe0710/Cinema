@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://services.cinema/" version="1.0" xmlns:tns="http://services.cinema/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="createMessage" type="tns:createMessage"/>
+
+  <xs:element name="createMessageResponse" type="tns:createMessageResponse"/>
+
+  <xs:element name="deleteMessage" type="tns:deleteMessage"/>
+
+  <xs:element name="deleteMessageResponse" type="tns:deleteMessageResponse"/>
+
+  <xs:element name="getMessageList" type="tns:getMessageList"/>
+
+  <xs:element name="getMessageListResponse" type="tns:getMessageListResponse"/>
+
+  <xs:element name="retrieveMessage" type="tns:retrieveMessage"/>
+
+  <xs:element name="retrieveMessageResponse" type="tns:retrieveMessageResponse"/>
+
+  <xs:element name="updateMessage" type="tns:updateMessage"/>
+
+  <xs:element name="updateMessageResponse" type="tns:updateMessageResponse"/>
+
+  <xs:complexType name="deleteMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ticketData">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element name="price" type="xs:int"/>
+      <xs:element name="quantity" type="xs:int"/>
+      <xs:element minOccurs="0" name="screen" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:element name="total" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deleteMessageResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMessageList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMessageListResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateMessageResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="createMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createMessageResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="retrieveMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="retrieveMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ticketData"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

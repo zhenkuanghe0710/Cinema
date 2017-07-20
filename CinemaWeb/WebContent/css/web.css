@@ -1,0 +1,36 @@
+.body
+{
+	margin-top:30px; 
+	text-align: center; 
+}
+
+.title
+{
+	font-size: 25px; 
+}
+
+.topicTable
+{
+	margin: auto;
+}
+
+
+.content
+{
+	font-size: 20px; 
+}
+
+
+.QuestionMark
+{
+	width: 20px;
+	text-align:center; 
+}
+
+.itemList
+{
+	margin: auto;
+	border:1px; 
+	cellspacing:0px;
+	cellpadding:6px;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MailDAO">
+        <wb-resource deploy-path="/" source-path="/ejbModule"/>
+        <wb-resource deploy-path="/" source-path="/.apt_generated"/>
+        <dependent-module deploy-path="/" handle="module:/resource/MailDAOClient/MailDAOClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="ejbModule"/>
+        <property name="ClientProject" value="MailDAOClient"/>
+        <property name="ClientJARURI" value="MailDAOClient.jar"/>
+    </wb-module>
+</project-modules>

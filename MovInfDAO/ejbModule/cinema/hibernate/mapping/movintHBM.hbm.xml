@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping package="cinema.datas">
+
+		  <class name="MovInfData" table="MovInfTable">	  
+				  	<id name="id" type="integer" column="ID">
+				  				<generator class="native"></generator>
+				  	</id>
+				  	
+				  	<property name="title" type="string" column="TITLE" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="screen" type="string" column="SCREEN" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="price" type="integer" column="PRICE" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="seats" type="integer" column="SEATS" not-null="true" length="50">
+				  	</property>
+		  </class>
+  
+</hibernate-mapping>

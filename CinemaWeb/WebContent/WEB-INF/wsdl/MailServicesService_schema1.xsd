@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://services.cinema/" version="1.0" xmlns:tns="http://services.cinema/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="createMail" type="tns:createMail"/>
+
+  <xs:element name="createMailResponse" type="tns:createMailResponse"/>
+
+  <xs:element name="getMailList" type="tns:getMailList"/>
+
+  <xs:element name="getMailListResponse" type="tns:getMailListResponse"/>
+
+  <xs:element name="sendMail" type="tns:sendMail"/>
+
+  <xs:element name="sendMailResponse" type="tns:sendMailResponse"/>
+
+  <xs:complexType name="getMailList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:mailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="content" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="receiver" type="xs:string"/>
+      <xs:element minOccurs="0" name="sender" type="xs:string"/>
+      <xs:element minOccurs="0" name="subject" type="xs:string"/>
+      <xs:element minOccurs="0" name="timestamp" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMailListResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:mailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendMail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:mailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendMailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:mailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createMail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:mailData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createMailResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

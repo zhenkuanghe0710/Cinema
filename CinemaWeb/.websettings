@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><websettings version="600">
+<features>
+<feature>
+<feature-id>com.ibm.etools.struts.wizards.project.feature</feature-id>
+</feature>
+</features>
+</websettings>

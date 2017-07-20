@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1294471329788">
+  <serviceRefs xmi:id="ServiceRef_1294471329788" serviceRefLink="service/MonInfServicesService">
+    <portQnameBindings xmi:id="PortQnameBinding_1294471329788" portQnameNamespaceLink="http://services.cinema/" portQnameLocalNameLink="MonInfServicesPort" overriddenEndpointURI="http://localhost:9080/MovInfServices_HTTPRouter/MonInfServicesService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1294580604485" serviceRefLink="service/TicketServicesService">
+    <portQnameBindings xmi:id="PortQnameBinding_1294580604485" portQnameNamespaceLink="http://services.cinema/" portQnameLocalNameLink="TicketServicesPort" overriddenEndpointURI="http://localhost:9080/TicketServices_HTTPRouter/TicketServicesService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1294580948425" serviceRefLink="service/MailServicesService">
+    <portQnameBindings xmi:id="PortQnameBinding_1294580948425" portQnameNamespaceLink="http://services.cinema/" portQnameLocalNameLink="MailServicesPort" overriddenEndpointURI="http://localhost:9080/MailServices_HTTPRouter/MailServicesService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1294581739588" serviceRefLink="service/MovInfServicesService">
+    <portQnameBindings xmi:id="PortQnameBinding_1294581739588" portQnameNamespaceLink="http://services.cinema/" portQnameLocalNameLink="MovInfServicesPort" overriddenEndpointURI="http://localhost:9080/MovInfServices_HTTPRouter/MovInfServicesService"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>

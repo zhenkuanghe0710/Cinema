@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	
+	<form-beans>
+	    <form-bean name="CinemaForm" type="cinema.forms.CinemaForm"></form-bean>
+	</form-beans>
+	
+	<global-exceptions>
+	</global-exceptions>
+	
+	<global-forwards>
+	   <forward name="VFDone" path="/Manage.jsp"></forward>
+	   <forward name="ActionError" path="/error.jsp"></forward>
+	   <forward name="VFWrong" path="/Result.jsp"></forward>
+	   <forward name="CMIDone" path="/MovInf.jsp"></forward>
+	   <forward name="SMIDone" path="/MovInfResult.jsp"></forward>
+	   <forward name="DMIDone" path="/MovInfResult.jsp"></forward>
+	   <forward name="BCMIDone" path="/Book.jsp"></forward>
+	   <forward name="BookDone" path="/BCUResult.jsp"></forward>
+	   <forward name="CTKDone" path="/Ticket.jsp"></forward>
+	   <forward name="PCTKDone" path="/ChangeTicket.jsp"></forward>
+	   <forward name="CHTKDone" path="/BCUResult.jsp"></forward>
+	   <forward name="DTKDone" path="/DelResult.jsp"></forward>
+	   <forward name="DCTKDone" path="/DelTicket.jsp"></forward>
+	   <forward name="DCMIDone" path="/DelMovInf.jsp"></forward>
+	   <forward name="UCMIDone" path="/UpdMovInf.jsp"></forward>
+	   <forward name="UMIDone" path="/UResult.jsp"></forward>
+	   <forward name="CMDone" path="/CheckMail.jsp"></forward>
+	   <forward name="SMDone" path="/BCUResult.jsp"></forward>
+	   
+	   
+	   
+	   
+	   
+	</global-forwards>
+	
+	<action-mappings>
+		<action path="/doVerify"
+		    type="cinema.actions.DoVerifyAction"
+		    name="CinemaForm"
+		    scope="request"
+		    validate="false">
+		
+		</action>
+		<action path="/doSetMovInf"
+		    type="cinema.actions.SetMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		<action path="/doCMI"
+		    type="cinema.actions.CheckMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doDCMI"
+		    type="cinema.actions.DCheckMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doSM"
+		    type="cinema.actions.SendMailAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doCM"
+		    type="cinema.actions.CheckMailAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doDMI"
+		    type="cinema.actions.DeleteMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doUMI"
+		    type="cinema.actions.UpdMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doUCMI"
+		    type="cinema.actions.UCheckMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doBCMI"
+		    type="cinema.actions.BCheckMovInfAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doBook"
+		    type="cinema.actions.BookTicketAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doCTK"
+		    type="cinema.actions.CheckTicketAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doPCTK"
+		    type="cinema.actions.PCheckTicketAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doDCTK"
+		    type="cinema.actions.DCheckTicketAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doCHTK"
+		    type="cinema.actions.ChangeTicketAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		<action path="/doDTK"
+		    type="cinema.actions.DeleteTicketAction"
+		    name="CinemaForm"
+		    scope="request"
+		    input="/error.jsp"
+			cancellable="true"
+		    validate="false">
+		
+		</action>
+		
+		
+	</action-mappings>
+	
+	<message-resources parameter="cinemaweb.resources.ApplicationResources"/>
+</struts-config>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions name="MovInfServicesService" targetNamespace="http://services.cinema/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://services.cinema/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://services.cinema/" schemaLocation="MovInfServicesService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="retrieveMIMessageResponse">
+    <part element="tns:retrieveMIMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="createMIMessageResponse">
+    <part element="tns:createMIMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="deleteMIMessage">
+    <part element="tns:deleteMIMessage" name="parameters">
+    </part>
+  </message>
+  <message name="deleteMIMessageResponse">
+    <part element="tns:deleteMIMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="updateMIMessage">
+    <part element="tns:updateMIMessage" name="parameters">
+    </part>
+  </message>
+  <message name="updateMIMessageResponse">
+    <part element="tns:updateMIMessageResponse" name="parameters">
+    </part>
+  </message>
+  <message name="getMIMessageList">
+    <part element="tns:getMIMessageList" name="parameters">
+    </part>
+  </message>
+  <message name="getMIMessageListResponse">
+    <part element="tns:getMIMessageListResponse" name="parameters">
+    </part>
+  </message>
+  <message name="retrieveMIMessage">
+    <part element="tns:retrieveMIMessage" name="parameters">
+    </part>
+  </message>
+  <message name="Exception">
+    <part element="tns:Exception" name="fault">
+    </part>
+  </message>
+  <message name="createMIMessage">
+    <part element="tns:createMIMessage" name="parameters">
+    </part>
+  </message>
+  <portType name="MovInfServices">
+    <operation name="deleteMIMessage">
+      <input message="tns:deleteMIMessage">
+    </input>
+      <output message="tns:deleteMIMessageResponse">
+    </output>
+    </operation>
+    <operation name="createMIMessage">
+      <input message="tns:createMIMessage">
+    </input>
+      <output message="tns:createMIMessageResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="getMIMessageList">
+      <input message="tns:getMIMessageList">
+    </input>
+      <output message="tns:getMIMessageListResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="updateMIMessage">
+      <input message="tns:updateMIMessage">
+    </input>
+      <output message="tns:updateMIMessageResponse">
+    </output>
+    </operation>
+    <operation name="retrieveMIMessage">
+      <input message="tns:retrieveMIMessage">
+    </input>
+      <output message="tns:retrieveMIMessageResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="MovInfServicesPortBinding" type="tns:MovInfServices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="deleteMIMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="createMIMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getMIMessageList">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="updateMIMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="retrieveMIMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="MovInfServicesService">
+    <port binding="tns:MovInfServicesPortBinding" name="MovInfServicesPort">
+      <soap:address location="http://localhost:9080/MovInfServices_HTTPRouter/MovInfServicesService"/>
+    </port>
+  </service>
+</definitions>

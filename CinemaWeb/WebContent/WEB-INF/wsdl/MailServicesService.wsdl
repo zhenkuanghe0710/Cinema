@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions name="MailServicesService" targetNamespace="http://services.cinema/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://services.cinema/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://services.cinema/" schemaLocation="MailServicesService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="sendMailResponse">
+    <part element="tns:sendMailResponse" name="parameters">
+    </part>
+  </message>
+  <message name="createMail">
+    <part element="tns:createMail" name="parameters">
+    </part>
+  </message>
+  <message name="createMailResponse">
+    <part element="tns:createMailResponse" name="parameters">
+    </part>
+  </message>
+  <message name="getMailList">
+    <part element="tns:getMailList" name="parameters">
+    </part>
+  </message>
+  <message name="getMailListResponse">
+    <part element="tns:getMailListResponse" name="parameters">
+    </part>
+  </message>
+  <message name="sendMail">
+    <part element="tns:sendMail" name="parameters">
+    </part>
+  </message>
+  <message name="Exception">
+    <part element="tns:Exception" name="fault">
+    </part>
+  </message>
+  <portType name="MailServices">
+    <operation name="createMail">
+      <input message="tns:createMail">
+    </input>
+      <output message="tns:createMailResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="getMailList">
+      <input message="tns:getMailList">
+    </input>
+      <output message="tns:getMailListResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+    <operation name="sendMail">
+      <input message="tns:sendMail">
+    </input>
+      <output message="tns:sendMailResponse">
+    </output>
+      <fault message="tns:Exception" name="Exception">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="MailServicesPortBinding" type="tns:MailServices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="createMail">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getMailList">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="sendMail">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="MailServicesService">
+    <port binding="tns:MailServicesPortBinding" name="MailServicesPort">
+      <soap:address location="http://localhost:9080/MailServices_HTTPRouter/MailServicesService"/>
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping package="cinema.datas">
+
+		  <class name="TicketData" table="TicketTable">	  
+				  	<id name="id" type="integer" column="ID">
+				  				<generator class="native"></generator>
+				  	</id>
+				  	
+				  	<property name="title" type="string" column="TITLE" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="screen" type="string" column="SCREEN" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="name" type="string" column="NAME" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="quantity" type="integer" column="QUANTITY" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="price" type="integer" column="PRICE" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="total" type="integer" column="TOTAL" not-null="true" length="50">
+				  	</property>
+		  </class>
+  
+</hibernate-mapping>

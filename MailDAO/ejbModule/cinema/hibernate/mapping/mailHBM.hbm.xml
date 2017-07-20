@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping package="cinema.datas">
+
+		  <class name="MailData" table="MAIL">	  
+				  	<id name="id" type="integer" column="ID">
+				  				<generator class="native"></generator>
+				  	</id>
+				  	
+				  	<property name="sender" type="string" column="SENDER" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="receiver" type="string" column="RECEIVER" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="subject" type="string" column="SUBJECT" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="content" type="string" column="CONTENT" not-null="true" length="50">
+				  	</property>
+				  	
+				  	<property name="timestamp" type="string" column="TIMESTAMP" not-null="true" length="50">
+				  	</property>
+		  </class>
+  
+</hibernate-mapping>
